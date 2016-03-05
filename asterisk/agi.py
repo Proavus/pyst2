@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # vim: set et sw=4:
 """agi
 
@@ -121,7 +121,7 @@ class AGI:
           string = str(string)
         if isinstance(string, float):
           string = str(string)
-        return ''.join(['"', string.encode('ascii', 'ignore'), '"'])
+        return ''.join(['"', string.encode('ascii', 'ignore').decode("ascii"), '"'])
 
     def _handle_sighup(self, signum, frame):
         """Handle the SIGHUP signal"""
